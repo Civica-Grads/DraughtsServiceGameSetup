@@ -17,7 +17,7 @@ public class GameSetupController {
     private Game defaultDraughtsGame;
 
     
-    @RequestMapping("/GameSetup")
+    @RequestMapping("/")
     @ResponseBody
     String renderBoard() throws GameException {
         
