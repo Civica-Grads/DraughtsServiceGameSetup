@@ -9,12 +9,12 @@ import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-public class BoardDisplayController {
+public class GameSetupController {
 
     
     @Autowired
     private Board board;
-    
+
     
     @RequestMapping("/")
     @ResponseBody
