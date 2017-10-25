@@ -1,6 +1,15 @@
 package com.civica.grads.boardgames.web;
 
+import com.civica.grads.boardgames.enums.Difficulty;
+import com.civica.grads.boardgames.exceptions.GameSetupException;
 import com.civica.grads.boardgames.model.Board;
+import com.civica.grads.boardgames.model.Game;
+import com.civica.grads.boardgames.model.draughts.DraughtsGame;
+import com.civica.grads.boardgames.model.draughts.DraughtsGame.BoardType;
+import com.civica.grads.boardgames.model.player.AIPlayer;
+import com.civica.grads.boardgames.model.player.HumanPlayer;
+import com.civica.grads.boardgames.model.player.Player;
+import com.civica.grads.boardgames.model.player.draughts.DraughtsAIPlayer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -15,12 +24,18 @@ public class GameSetupMicroServiceApplication {
         SpringApplication.run(GameSetupMicroServiceApplication.class, args);
     }
     
-    
+
     @Bean
-    Board board()
+    Game defaultDraughtsGame() throws GameSetupException
     {
-        return new Board(10);
-    }
+    	Player whitePlayer = new HumanPlayer("Ryan");
+    	Player blackPlayer = new DraughtsAIPlayer("Hamza",Difficulty.EASY);
+    	Player[] players= {whitePlayer , blackPlayer};
+    	
+    	return new DraughtsGame(BoardType.BRAZILIAN,players);
+    	
     
+    			
+    }
     
 }
