@@ -22,27 +22,16 @@ public class BoardController {
     //    private Board board;
 
     @RequestMapping("/create")
-    Board createBoard(@RequestParam String gameType) throws GameException {
 
-        return createBoard(BoardType.valueOf(gameType));
-    }
-
-    
-    
-    
-    private Board createBoard(BoardType boardType) throws GameSetupException {
-        return createGame(boardType).getBoard();
-    }
-
-
-
-
-    private Game createGame(BoardType boardType) throws GameSetupException {
-        Player whitePlayer = new HumanPlayer("Ryan");
-        Player blackPlayer = new DraughtsAIPlayer("Hamza", Difficulty.EASY);
+    private Game createGame(@RequestParam String gameType,@RequestParam String humanPlayer,@RequestParam String AIPlayer,
+    		@RequestParam String AIDifficulty) throws GameSetupException {
+    	Player whitePlayer = new HumanPlayer(humanPlayer);
+        Player blackPlayer = new DraughtsAIPlayer(AIPlayer, Difficulty.valueOf(AIDifficulty));
         Player[] players = {whitePlayer, blackPlayer };
-
-        return new DraughtsGame(boardType, players);
+    	
+    	
+    	
+        return new DraughtsGame(BoardType.valueOf(gameType), players);
     }
 
 }
