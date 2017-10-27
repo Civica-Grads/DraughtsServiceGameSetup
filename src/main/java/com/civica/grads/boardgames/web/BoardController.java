@@ -29,14 +29,14 @@ public class BoardController {
     
     
     
-    private Board createBoard(BoardType boardType) throws GameSetupException {
+    private Board createBoard(BoardType boardType) throws GameException {
         return createGame(boardType).getBoard();
     }
 
 
 
 
-    private Game createGame(BoardType boardType) throws GameSetupException {
+    private Game createGame(BoardType boardType) throws GameException {
         Player whitePlayer = new HumanPlayer("Ryan");
         Player blackPlayer = new DraughtsAIPlayer("Hamza", Difficulty.EASY);
         Player[] players = {whitePlayer, blackPlayer };

@@ -1,6 +1,7 @@
 package com.civica.grads.boardgames.web;
 
 import com.civica.grads.boardgames.enums.Difficulty;
+import com.civica.grads.boardgames.exceptions.GameException;
 import com.civica.grads.boardgames.exceptions.GameSetupException;
 import com.civica.grads.boardgames.model.Game;
 import com.civica.grads.boardgames.model.draughts.DraughtsGame;
@@ -24,7 +25,7 @@ public class GameSetupMicroServiceApplication {
     
 
     @Bean
-    Game defaultDraughtsGame() throws GameSetupException
+    Game defaultDraughtsGame() throws GameException
     {
     	Player whitePlayer = new HumanPlayer("Ryan");
     	Player blackPlayer = new DraughtsAIPlayer("Hamza",Difficulty.EASY);
