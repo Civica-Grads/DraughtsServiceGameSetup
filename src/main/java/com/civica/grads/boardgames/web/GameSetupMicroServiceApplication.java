@@ -2,7 +2,7 @@ package com.civica.grads.boardgames.web;
 
 import com.civica.grads.boardgames.enums.Difficulty;
 import com.civica.grads.boardgames.exceptions.GameSetupException;
-import com.civica.grads.boardgames.model.Board;
+import com.civica.grads.boardgames.model.GameBoard;
 import com.civica.grads.boardgames.model.Game;
 import com.civica.grads.boardgames.model.draughts.DraughtsGame;
 import com.civica.grads.boardgames.model.draughts.DraughtsGame.BoardType;
