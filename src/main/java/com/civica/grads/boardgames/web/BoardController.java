@@ -12,7 +12,6 @@ import com.civica.grads.boardgames.model.player.HumanPlayer;
 import com.civica.grads.boardgames.model.player.Player;
 import com.civica.grads.boardgames.model.player.draughts.DraughtsAIPlayer;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

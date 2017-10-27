@@ -2,7 +2,6 @@ package com.civica.grads.boardgames.web;
 
 import com.civica.grads.boardgames.display.StringBufferBoardRenderer;
 import com.civica.grads.boardgames.exceptions.GameException;
-import com.civica.grads.boardgames.model.GameBoard;
 import com.civica.grads.boardgames.model.Game;
 
 import org.springframework.beans.factory.annotation.Autowired;

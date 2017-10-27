@@ -2,11 +2,9 @@ package com.civica.grads.boardgames.web;
 
 import com.civica.grads.boardgames.enums.Difficulty;
 import com.civica.grads.boardgames.exceptions.GameSetupException;
-import com.civica.grads.boardgames.model.GameBoard;
 import com.civica.grads.boardgames.model.Game;
 import com.civica.grads.boardgames.model.draughts.DraughtsGame;
 import com.civica.grads.boardgames.model.draughts.DraughtsGame.BoardType;
-import com.civica.grads.boardgames.model.player.AIPlayer;
 import com.civica.grads.boardgames.model.player.HumanPlayer;
 import com.civica.grads.boardgames.model.player.Player;
 import com.civica.grads.boardgames.model.player.draughts.DraughtsAIPlayer;
